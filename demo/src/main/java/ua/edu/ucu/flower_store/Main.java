@@ -1,6 +1,10 @@
+/**
+ * Class Main
+ */
 package ua.edu.ucu.flower_store;
-
+/** ... */
 public class Main {
+    /** ... */
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
@@ -18,9 +22,6 @@ public class Main {
 
         FlowerBucket flowerBucket = new FlowerBucket();
         flowerBucket.addFlowerPack(flowerPack);
-        System.out.println(flowerBucket.getPrice());
-
-
-        
+        System.out.println(flowerBucket.getPrice()); 
     }
 }

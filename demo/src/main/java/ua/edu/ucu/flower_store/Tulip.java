@@ -1,5 +1,7 @@
+/**
+ * Class Tulip
+ */
 package ua.edu.ucu.flower_store;
-
-public class Tulip extends Flower{
-
+/** ... */
+public class Tulip extends Flower {
 }
