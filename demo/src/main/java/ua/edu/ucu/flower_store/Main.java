@@ -1,5 +1,5 @@
 /**
- * Class Main is a utility class for demonstrating the Flower Store functionality.
+ * Main utility class for application entry point and demonstration.
  */
 package ua.edu.ucu.flower_store;
 
@@ -7,12 +7,10 @@ package ua.edu.ucu.flower_store;
 
 /**
  * Main utility class for application entry point and demonstration.
- * Checkstyle requires utility classes (like Main with only a static main method) 
- * to be declared final to prevent extension and have a private constructor.
+ * Checkstyle requires utility classes to be declared final and 
+ * have a private constructor.
  */
 public final class Main {
-
-    // --- Magic Numbers replaced by constants (FinalParameters) ---
 
     /** Constant for the flower's default price. */
     public static final double FLOWER_PRICE = 100;
@@ -23,7 +21,6 @@ public final class Main {
 
     /**
      * Private constructor to prevent instantiation of this utility class.
-     * (Fix for HideUtilityClassConstructor).
      */
     private Main() {
         // Utility class
@@ -32,7 +29,6 @@ public final class Main {
     /**
      * The application entry point.
      * @param args command line arguments
-     * (Fix for FinalParameters: args is declared final)
      */
     public static void main(final String[] args) { 
         System.out.println("Hello world!");
@@ -54,4 +50,3 @@ public final class Main {
         System.out.println(flowerBucket.getPrice());
     }
 }
-// Ensure there is a blank line here (Fix for NewlineAtEndOfFile)

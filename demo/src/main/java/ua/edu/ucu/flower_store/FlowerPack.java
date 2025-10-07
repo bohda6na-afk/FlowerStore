@@ -7,9 +7,7 @@ import lombok.Data;
  * This class is declared final to satisfy DesignForExtension check.
  */
 @Data
-public final class FlowerPack { // Added 'final'
-
-    // --- Fix for Missing a Javadoc comment [JavadocVariable] ---
+public final class FlowerPack {
 
     /** The type of flower in the pack. */
     private Flower flower;
@@ -21,16 +19,17 @@ public final class FlowerPack { // Added 'final'
      * Calculates the total price of the flower pack.
      * @return the total price of the pack
      */
-    public double getPrice() { // Added Javadoc
+    public double getPrice() {
         return flower.getPrice() * quantity;
     }
     
     /**
      * Constructor for creating a FlowerPack.
-     * @param flower the flower type (Fix for FinalParameters, HiddenField)
-     * @param quantity the number of flowers (Fix for FinalParameters, HiddenField, WhitespaceAround)
+     * @param flower the flower type
+     * @param quantity the number of flowers
      */
-    public FlowerPack(final Flower flower, final int quantity) { // Added 'final', space before '{'
+    public FlowerPack(final Flower flower, 
+                      final int quantity) {
         // Use 'this.' to resolve HiddenField error
         this.flower = new Flower(flower);
         this.quantity = quantity;
@@ -38,13 +37,10 @@ public final class FlowerPack { // Added 'final'
 
     /**
      * Sets the flower type for the pack.
-     * @param flower the new flower type (Fix for FinalParameters, HiddenField, WhitespaceAround)
+     * @param flower the new flower type
      */
-    public void setFlower(final Flower flower) { // Added 'final', space before '{'
+    public void setFlower(final Flower flower) {
         // Use 'this.' to resolve HiddenField error
         this.flower = new Flower(flower);
     }
-    
-    // Lombok's @Data annotation generates other methods like setQuantity, which might also need manual Javadoc/Final if your checkstyle config targets generated methods. 
-    // Usually, SuperLinter doesn't check generated code.
 }

@@ -12,33 +12,33 @@ public class Flower {
 
     /** The color of the flower. */
     private FlowerColor color;
-    
+
     /** The price of the flower. */
-    private double price; // ЗМІНЕНО: double, щоб відповідати конструктору
+    private double price;
     
     /** The sepal length of the flower. */
-    private double sepalLength; // ЗМІНЕНО: double, щоб відповідати конструктору
-    
+    private double sepalLength;
+
     /** The type of the flower (e.g., ROSE, TULIP). */
     private FlowerType flowerType;
 
-    // --- ДОДАНО КОНСТРУКТОР ДЛЯ НАЩАДКІВ ---
     /**
      * Constructor for creating a Flower object.
-     * @param sepalLength The length of the sepal (Fix for FinalParameters)
-     * @param color The color of the flower (Fix for FinalParameters)
-     * @param price The price of the flower (Fix for FinalParameters)
+     * @param sepalLength The length of the sepal
+     * @param color The color of the flower
+     * @param price The price of the flower
      */
-    public Flower(final double sepalLength, final FlowerColor color, final double price) { // Додано Javadoc і final
+    public Flower(final double sepalLength, 
+                  final FlowerColor color, 
+                  final double price) { 
         this.sepalLength = sepalLength;
         this.color = color;
         this.price = price;
     }
-    // ----------------------------------------
-    
+
     /**
      * Copy constructor for creating a new Flower object from an existing one.
-     * @param other the Flower object to copy properties from (Fix for FinalParameters)
+     * @param other the Flower object to copy properties from
      */
     public Flower(final Flower other) {
         this.price = other.price;
