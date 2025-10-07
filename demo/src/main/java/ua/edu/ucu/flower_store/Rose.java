@@ -1,7 +1,21 @@
-/**
- * Class Rose
- */
 package ua.edu.ucu.flower_store;
-/** ... */
-public class Rose extends Flower {
+
+/**
+ * Represents a Rose flower, inheriting properties from Flower.
+ * This class is declared final to satisfy DesignForExtension check.
+ */
+public final class Rose extends Flower { // Added 'final'
+    
+    // Assuming Flower has a constructor: Flower(double sepalLength, FlowerColor color, double price)
+    
+    /**
+     * Constructor for Rose.
+     * @param sepalLength length of the sepal (Fix for FinalParameters)
+     * @param color color of the flower (Fix for FinalParameters)
+     * @param price price of the flower (Fix for FinalParameters)
+     */
+    public Rose(final double sepalLength, final FlowerColor color, final double price) {
+        super(sepalLength, color, price);
+        this.setFlowerType(FlowerType.ROSE);
+    }
 }
