@@ -9,9 +9,9 @@ import lombok.Getter;
 public enum FlowerColor {
 
     /** Represents the red color. */
-    RED("#FF0000"), 
+    RED("#FF0000"),
     /** Represents the yellow color. */
-    YELLOW("#FFFF00"), 
+    YELLOW("#FFFF00"),
     /** Represents the white color. */
     WHITE("#FFFFFF");
 
@@ -20,9 +20,9 @@ public enum FlowerColor {
 
     /**
      * Constructor for FlowerColor enum.
-     * @param code The HEX string representation of the color
+     * @param hexCode The HEX string representation of the color
      */
-    FlowerColor(final String code) {
-        this.code = code; 
+    FlowerColor(final String hexCode) { // Виправлено HiddenField
+        this.code = hexCode;
     }
 }

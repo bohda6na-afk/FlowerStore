@@ -12,8 +12,8 @@ public final class Tulip extends Flower {
      * @param color color of the flower
      * @param price price of the flower
      */
-    public Tulip(final double sepalLength, 
-                 final FlowerColor color, 
+    public Tulip(final double sepalLength,
+                 final FlowerColor color,
                  final double price) {
         super(sepalLength, color, price);
         this.setFlowerType(FlowerType.TULIP);

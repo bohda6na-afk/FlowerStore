@@ -7,7 +7,7 @@ package ua.edu.ucu.flower_store;
 
 /**
  * Main utility class for application entry point and demonstration.
- * Checkstyle requires utility classes to be declared final and 
+ * Checkstyle requires utility classes to be declared final and
  * have a private constructor.
  */
 public final class Main {
@@ -30,7 +30,7 @@ public final class Main {
      * The application entry point.
      * @param args command line arguments
      */
-    public static void main(final String[] args) { 
+    public static void main(final String[] args) {
         System.out.println("Hello world!");
 
         Flower flower = new Flower();
@@ -42,8 +42,10 @@ public final class Main {
         System.out.println(flower);
 
         FlowerPack flowerPack = new FlowerPack(flower, PACK_QUANTITY);
-        flowerPack.setFlower(flower);
-        flowerPack.setQuantity(PACK_QUANTITY);
+        // Видалено зайві setFlower/setQuantity, оскільки вони вже
+        // виконуються в конструкторі.
+        // flowerPack.setFlower(flower);
+        // flowerPack.setQuantity(PACK_QUANTITY);
 
         FlowerBucket flowerBucket = new FlowerBucket();
         flowerBucket.addFlowerPack(flowerPack);

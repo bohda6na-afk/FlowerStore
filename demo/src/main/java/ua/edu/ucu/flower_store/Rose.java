@@ -12,8 +12,8 @@ public final class Rose extends Flower {
      * @param color color of the flower
      * @param price price of the flower
      */
-    public Rose(final double sepalLength, 
-                final FlowerColor color, 
+    public Rose(final double sepalLength,
+                final FlowerColor color,
                 final double price) {
         super(sepalLength, color, price);
         this.setFlowerType(FlowerType.ROSE);

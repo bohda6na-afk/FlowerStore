@@ -6,11 +6,11 @@ package ua.edu.ucu.flower_store;
 public enum FlowerType {
 
     /** Represents a Rose flower. */
-    ROSE, 
+    ROSE,
     /** Represents a Tulip flower. */
-    TULIP, 
+    TULIP,
     /** Represents a Chamomile flower. */
-    CHAMOMILE, 
+    CHAMOMILE,
     /** Represents a Lily flower. */
     LILY;
 }

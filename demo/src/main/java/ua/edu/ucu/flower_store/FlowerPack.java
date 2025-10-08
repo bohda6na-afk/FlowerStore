@@ -11,7 +11,7 @@ public final class FlowerPack {
 
     /** The type of flower in the pack. */
     private Flower flower;
-    
+
     /** The quantity of flowers in the pack. */
     private int quantity;
 
@@ -22,25 +22,24 @@ public final class FlowerPack {
     public double getPrice() {
         return flower.getPrice() * quantity;
     }
-    
+
     /**
      * Constructor for creating a FlowerPack.
-     * @param flower the flower type
-     * @param quantity the number of flowers
+     * @param flowerType The flower type
+     * @param flowerQuantity The number of flowers
      */
-    public FlowerPack(final Flower flower, 
-                      final int quantity) {
-        // Use 'this.' to resolve HiddenField error
-        this.flower = new Flower(flower);
-        this.quantity = quantity;
+    public FlowerPack(final Flower flowerType,
+                      final int flowerQuantity) {
+        // Виправлено HiddenField, використовуючи інші назви параметрів
+        this.flower = new Flower(flowerType);
+        this.quantity = flowerQuantity;
     }
 
     /**
      * Sets the flower type for the pack.
-     * @param flower the new flower type
+     * @param newFlower the new flower type
      */
-    public void setFlower(final Flower flower) {
-        // Use 'this.' to resolve HiddenField error
-        this.flower = new Flower(flower);
+    public void setFlower(final Flower newFlower) { // Виправлено HiddenField
+        this.flower = new Flower(newFlower);
     }
 }

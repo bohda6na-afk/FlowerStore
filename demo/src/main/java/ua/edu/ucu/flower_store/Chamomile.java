@@ -14,8 +14,8 @@ public final class Chamomile extends Flower {
      * @param color color of the flower
      * @param price price of the flower
      */
-    public Chamomile(final double sepalLength, 
-                     final FlowerColor color, 
+    public Chamomile(final double sepalLength,
+                     final FlowerColor color,
                      final double price) {
         super(sepalLength, color, price);
         this.setFlowerType(FlowerType.CHAMOMILE);

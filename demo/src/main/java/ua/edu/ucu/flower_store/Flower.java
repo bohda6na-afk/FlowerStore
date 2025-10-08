@@ -15,7 +15,7 @@ public class Flower {
 
     /** The price of the flower. */
     private double price;
-    
+
     /** The sepal length of the flower. */
     private double sepalLength;
 
@@ -24,16 +24,16 @@ public class Flower {
 
     /**
      * Constructor for creating a Flower object.
-     * @param sepalLength The length of the sepal
-     * @param color The color of the flower
-     * @param price The price of the flower
+     * @param sepalLengthValue The length of the sepal
+     * @param colorValue The color of the flower
+     * @param priceValue The price of the flower
      */
-    public Flower(final double sepalLength, 
-                  final FlowerColor color, 
-                  final double price) { 
-        this.sepalLength = sepalLength;
-        this.color = color;
-        this.price = price;
+    public Flower(final double sepalLengthValue,
+                  final FlowerColor colorValue,
+                  final double priceValue) {
+        this.sepalLength = sepalLengthValue; // Виправлено HiddenField
+        this.color = colorValue; // Виправлено HiddenField
+        this.price = priceValue; // Виправлено HiddenField
     }
 
     /**
@@ -44,5 +44,6 @@ public class Flower {
         this.price = other.price;
         this.sepalLength = other.sepalLength;
         this.flowerType = other.flowerType;
+        this.color = other.color; // Додано копіювання кольору
     }
 }
