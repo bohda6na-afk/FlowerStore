@@ -35,7 +35,8 @@ public final class Store {
      * @param spec the specification object defining the search criteria
      * @return a list of FlowerBucket objects that satisfy the specification
      */
-    public List<FlowerBucket> search(final Specification<FlowerBucket> spec) {
+    public List<FlowerBucket> search(
+            final Specification<FlowerBucket> spec) { // Line break applied here
         return buckets.stream()
                 .filter(spec::isSatisfiedBy)
                 .collect(Collectors.toList());

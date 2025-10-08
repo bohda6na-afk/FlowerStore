@@ -11,6 +11,18 @@ import static org.junit.jupiter.api.Assertions.assertNotSame;
 public final class FlowerPackTest {
     /** Delta constant for double comparison. */
     private static final double DELTA = 0.0001;
+    /** Default sepal length for test flower. */
+    private static final double DEFAULT_SEPAL_LENGTH = 10.0;
+    /** Default price for test flower. */
+    private static final double DEFAULT_PRICE = 5.0;
+    /** Test quantity 1. */
+    private static final int QTY_FIVE = 5;
+    /** Test quantity 2. */
+    private static final int QTY_ONE = 1;
+    /** Price used for deep copy test mutation. */
+    private static final double MUTATED_PRICE = 500.0;
+    /** Expected price for QTY_FIVE. */
+    private static final double EXPECTED_PRICE_25 = 25.0;
     /** Test flower object. */
     private Flower rose;
 
@@ -20,7 +32,8 @@ public final class FlowerPackTest {
     @BeforeEach
     public void setUp() {
         // Initialize a flower for the pack
-        rose = new Rose(10.0, FlowerColor.RED, 5.0);
+        rose = new Rose(DEFAULT_SEPAL_LENGTH, FlowerColor.RED, 
+                        DEFAULT_PRICE);
     }
 
     /**
@@ -28,10 +41,9 @@ public final class FlowerPackTest {
      */
     @Test
     public void testGetPrice() {
-        final int quantity = 5;
-        final FlowerPack pack = new FlowerPack(rose, quantity);
+        final FlowerPack pack = new FlowerPack(rose, QTY_FIVE);
         // Expected price: 5.0 * 5 = 25.0
-        assertEquals(25.0, pack.getPrice(), DELTA);
+        assertEquals(EXPECTED_PRICE_25, pack.getPrice(), DELTA);
     }
 
     /**
@@ -40,15 +52,14 @@ public final class FlowerPackTest {
      */
     @Test
     public void testDeepCopy() {
-        final int quantity = 2;
+        final int quantity = 2; // Can keep this if it's not reused
         final FlowerPack pack = new FlowerPack(rose, quantity);
         final double originalPrice = pack.getPrice(); // 10.0
 
         // Change the price of the external 'rose' object
-        rose.setPrice(500.0);
+        rose.setPrice(MUTATED_PRICE);
 
-        // Verify that FlowerPack's price remains unchanged (10.0),
-        // proving that it holds a copy.
+        // Verify that FlowerPack's price remains unchanged.
         assertEquals(originalPrice, pack.getPrice(), DELTA);
         assertNotSame(rose, pack.getFlower());
     }
@@ -58,7 +69,7 @@ public final class FlowerPackTest {
      */
     @Test
     public void testFlowerType() {
-        final FlowerPack pack = new FlowerPack(rose, 1);
+        final FlowerPack pack = new FlowerPack(rose, QTY_ONE);
         assertEquals(FlowerType.ROSE, pack.getFlower().getFlowerType());
     }
 }

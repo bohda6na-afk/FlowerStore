@@ -4,7 +4,7 @@ package ua.edu.ucu.flower_store;
  * A specification to filter FlowerBuckets based on the presence
  * of a specific FlowerType within its FlowerPacks.
  */
-public final class FlowerTypeSpecification implements 
+public final class FlowerTypeSpecification implements
         Specification<FlowerBucket> {
 
     /** The desired flower type to search for. */
