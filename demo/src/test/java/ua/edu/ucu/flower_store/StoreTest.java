@@ -18,7 +18,6 @@ public final class StoreTest {
     private static final int ROSE_RESULTS_COUNT = 2;
     /** Expected number of chamomile search results. */
     private static final int CHAMOMILE_RESULTS_COUNT = 1;
-    
     /** Rose sepal length. */
     private static final double ROSE_SEPAL = 10.0;
     /** Rose price. */

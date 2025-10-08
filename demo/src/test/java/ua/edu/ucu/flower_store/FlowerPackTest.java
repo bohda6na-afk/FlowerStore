@@ -32,7 +32,7 @@ public final class FlowerPackTest {
     @BeforeEach
     public void setUp() {
         // Initialize a flower for the pack
-        rose = new Rose(DEFAULT_SEPAL_LENGTH, FlowerColor.RED, 
+        rose = new Rose(DEFAULT_SEPAL_LENGTH, FlowerColor.RED,
                         DEFAULT_PRICE);
     }
 
