@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
- * Test suite for the Store and Specification classes, 
+ * Test suite for the Store and Specification classes,
  * focusing on the search logic.
  */
 public final class StoreTest {
@@ -55,7 +55,7 @@ public final class StoreTest {
         store = new Store();
         rose = new Rose(ROSE_SEPAL, FlowerColor.RED, ROSE_PRICE);
         tulip = new Tulip(TULIP_SEPAL, FlowerColor.YELLOW, TULIP_PRICE);
-        chamomile = new Chamomile(CHAMOMILE_SEPAL, FlowerColor.WHITE, 
+        chamomile = new Chamomile(CHAMOMILE_SEPAL, FlowerColor.WHITE,
                                   CHAMOMILE_PRICE);
 
         // Bucket 1: Roses only
@@ -85,7 +85,8 @@ public final class StoreTest {
     }
 
     /**
-     * Test searching by FlowerType Specification (e.g., all buckets with Roses).
+     * Test searching by
+     * FlowerType Specification (e.g., all buckets with Roses).
      */
     @Test
     public void testSearchByRoseType() {
@@ -105,7 +106,8 @@ public final class StoreTest {
     }
 
     /**
-     * Test searching by FlowerType Specification (e.g., all buckets with Chamomile).
+     * Test searching by FlowerType Specification
+     * (e.g., all buckets with Chamomile).
      */
     @Test
     public void testSearchByChamomileType() {

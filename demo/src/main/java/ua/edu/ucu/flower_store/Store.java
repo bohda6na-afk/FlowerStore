@@ -43,7 +43,8 @@ public final class Store {
     }
 
     /**
-     * Getter for the list of buckets (used primarily for testing and checkstyle).
+     * Getter for the list of buckets 
+     * (used primarily for testing and checkstyle).
      * @return the list of flower buckets in the store
      */
     public List<FlowerBucket> getBuckets() {
