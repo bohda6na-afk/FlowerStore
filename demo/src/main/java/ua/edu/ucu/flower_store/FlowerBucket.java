@@ -9,7 +9,7 @@ import java.util.List;
 public final class FlowerBucket {
 
     /** List of flower packs in the bucket. */
-    private List<FlowerPack> flowerPacks;
+    private final List<FlowerPack> flowerPacks; // Зроблено final
 
     /**
      * Constructor initializes an empty list of flower packs.
@@ -35,5 +35,15 @@ public final class FlowerBucket {
             .stream()
             .mapToDouble(pack -> pack.getPrice())
             .sum();
+    }
+
+    /**
+     * Getter for the list of flower packs (used for searching).
+     * Returns a new ArrayList instance to protect the internal state
+     * of the bucket from external modification.
+     * @return a copy of the list of flower packs
+     */
+    public List<FlowerPack> getFlowerPacks() {
+        return new ArrayList<>(this.flowerPacks);
     }
 }
